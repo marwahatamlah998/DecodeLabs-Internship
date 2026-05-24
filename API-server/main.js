@@ -5,6 +5,12 @@ app.use(express.json());
 
 let users = [];
 
+//middleware
+app.use((req, res, next) => {
+  console.log("Request received:", req.method, req.url);
+  next(); 
+});
+
 app.get("/api/users/", (req, res) => {
   res.json(users);
 });
