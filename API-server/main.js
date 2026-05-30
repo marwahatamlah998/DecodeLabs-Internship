@@ -11,6 +11,7 @@ app.use((req, res, next) => {
   next(); 
 });
 
+// HTTPS request
 app.get("/api/users/", (req, res) => {
   res.json(users);
 });
